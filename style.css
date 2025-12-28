@@ -675,3 +675,158 @@ body {
     from { width: 0; }
     to { width: 100%; }
   }
+
+/* ===== COUNTDOWN PAGE SPECIFIC STYLES ===== */
+
+/* Hourglass Icon */
+.hourglass-icon {
+    font-size: 3rem;
+    color: #ff9a9e;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+/* Progress Ring */
+.progress-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.progress-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+.progress-fill {
+    fill: none;
+    stroke: #ff9a9e;
+    stroke-linecap: round;
+    stroke-dasharray: 565;
+    stroke-dashoffset: 565;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 1s linear, stroke 0.5s ease;
+}
+
+/* Target Date */
+.target-date {
+    margin: 30px 0;
+}
+
+.target-date .date-bubble {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 30px;
+    background: rgba(255, 154, 158, 0.1);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 154, 158, 0.3);
+    font-size: 1.2rem;
+    color: #ffd1dc;
+}
+
+.target-date .date-bubble i {
+    color: #ff9a9e;
+}
+
+/* Status Indicator */
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+}
+
+.pulse-dot {
+    width: 12px;
+    height: 12px;
+    background: #4cd964;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+.status-indicator span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+/* Floating Elements for Countdown */
+.countdown-page .floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.countdown-page .floating-item {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.5;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+/* Colon Animation */
+.colon {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #ff9a9e;
+    animation: pulse 1s infinite;
+    margin: 0 10px;
+}
+
+/* Timer Container */
+.timer-container {
+    position: relative;
+    margin: 40px 0;
+}
+
+/* Add these animations if not already in style.css */
+@keyframes floatAround {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translate(20px, -20px) rotate(90deg) scale(1.1);
+    }
+    50% {
+        transform: translate(0, -40px) rotate(180deg) scale(1);
+    }
+    75% {
+        transform: translate(-20px, -20px) rotate(270deg) scale(1.1);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg) scale(1);
+    }
+}
+
+@keyframes pulseDot {
+    0%, 100% { 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+    50% { 
+        transform: scale(1.3); 
+        opacity: 0.7; 
+    }
+}
+
+/* Active Time Unit */
+.time-unit.active {
+    background: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 0 30px rgba(255, 235, 59, 0.4) !important;
+    transform: translateY(-5px);
+}

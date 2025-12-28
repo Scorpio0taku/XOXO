@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just a Little While Longer...</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏳</text></svg>">
+</head>
+<body class="countdown-page">
+    <!-- Main Container -->
+    <div class="countdown-container">
+        <!-- Header -->
+        <div class="countdown-header">
+            <div class="hourglass-icon">
+                <i class="fas fa-hourglass-half"></i>
+            </div>
+            <h1>The Countdown</h1>
+            <p class="subtitle">Something beautiful is being prepared just for you</p>
+        </div>
+        
+        <!-- Timer Display -->
+        <div class="timer-container">
+            <div class="digital-display">
+                <div class="time-unit">
+                    <div class="time-value" id="days">000</div>
+                    <div class="time-label">Days</div>
+                </div>
+                <div class="colon">:</div>
+                <div class="time-unit">
+                    <div class="time-value" id="hours">00</div>
+                    <div class="time-label">Hours</div>
+                </div>
+                <div class="colon">:</div>
+                <div class="time-unit">
+                    <div class="time-value" id="minutes">00</div>
+                    <div class="time-label">Minutes</div>
+                </div>
+                <div class="colon">:</div>
+                <div class="time-unit">
+                    <div class="time-value" id="seconds">00</div>
+                    <div class="time-label">Seconds</div>
+                </div>
+            </div>
+            
+            <!-- Progress Ring (Visual Timer) -->
+            <div class="progress-ring">
+                <svg width="200" height="200">
+                    <circle class="progress-bg" cx="100" cy="100" r="90" stroke-width="8"></circle>
+                    <circle class="progress-fill" cx="100" cy="100" r="90" stroke-width="8"></circle>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Romantic Messages -->
+        <div class="romantic-message">
+            <p class="main-message">Wait for just a bit 💕</p>
+            <p class="secondary-message">Good things come to those who wait</p>
+        </div>
+        
+        <!-- Target Date Display -->
+        <div class="target-date">
+            <div class="date-bubble">
+                <i class="fas fa-calendar-heart"></i>
+                <span>December 31st, 2026</span>
+            </div>
+        </div>
+        
+        <!-- Status Indicator -->
+        <div class="status-indicator" id="statusIndicator">
+            <div class="pulse-dot"></div>
+            <span id="statusText">Counting down...</span>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="floating-item">⏳</div>
+            <div class="floating-item">✨</div>
+            <div class="floating-item">💖</div>
+            <div class="floating-item">🌸</div>
+            <div class="floating-item">🎀</div>
+        </div>
+        
+        <!-- Hidden Redirect Message (For when timer completes) -->
+        <div class="redirect-message hidden" id="redirectMessage">
+            <div class="message-content">
+                <h3><i class="fas fa-gift"></i> The moment has arrived!</h3>
+                <p>Redirecting to your birthday surprise...</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="countdown.js"></script>
+</body>
+  </html>
